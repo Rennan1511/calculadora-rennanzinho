@@ -18,7 +18,7 @@
             align-items: center;
             min-height: 100vh;
             background: url('formulas-cientificas-no-conceito-de-lousa.avif') no-repeat center center fixed;
-            background-size: 100% 100%;
+            background-size: cover;
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
         }
@@ -240,6 +240,70 @@
             button {
                 padding: 12px;
                 font-size: 14px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 550px;
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .titulo-logo {
+                height: 60px;
+            }
+
+            #resultado {
+                font-size: 42px;
+            }
+
+            #operacao {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 18px;
+                font-size: 18px;
+            }
+
+            .historico {
+                max-height: 200px;
+            }
+        }
+
+        @media (min-width: 1900px) {
+            .container {
+                max-width: 600px;
+                padding: 50px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .titulo-logo {
+                height: 70px;
+            }
+
+            #resultado {
+                font-size: 48px;
+            }
+
+            #operacao {
+                font-size: 18px;
+            }
+
+            button {
+                padding: 20px;
+                font-size: 20px;
+            }
+
+            .historico {
+                max-height: 250px;
             }
         }
     </style>
