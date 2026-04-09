@@ -438,7 +438,7 @@
                     operacaoStr = `${num1} × ${num2}`;
                     break;
                 case '/':
-                    resultado = num2 !== 0 ? num1 / num2 : NaN;
+                    resultado = num2 !== 0 ? num1 / num2 : 0;
                     operacaoStr = `${num1} ÷ ${num2}`;
                     break;
                 case '%':
@@ -531,7 +531,7 @@
                     break;
                 case '/':
                     if (num2 === 0) {
-                        resultado = "Erro: Divisão por zero!";
+                        resultado = 0;
                         operacaoStr = `${num1} ÷ ${num2}`;
                     } else {
                         resultado = num1 / num2;
@@ -577,20 +577,13 @@
         }
 
         function limpar() {
-            tocarSom(220, 200);
-            cancelarFinalizacao();
-            display = "";
-            operandoAtual = "0";
-            operadorAtual = null;
-            novoNumero = true;
-            atualizarDisplay();
-        }
-
-        function limpar() {
-            tocarSom(220, 200);
-            display = "";
-            operandoAtual = "0";
-            operadorAtual = null;
+        tocarSom(220, 200);
+        cancelarFinalizacao();
+        display = "";
+        operandoAtual = "0";
+        operadorAtual = null;
+        novoNumero = true;
+        atualizarDisplay();;
             novoNumero = true;
             atualizarDisplay();
         }
@@ -601,7 +594,7 @@
                 case '+': resultado = num1 + num2; break;
                 case '-': resultado = num1 - num2; break;
                 case '*': resultado = num1 * num2; break;
-                case '/': resultado = num2 !== 0 ? num1 / num2 : "Erro: Divisão por zero!"; break;
+                case '/': resultado = num2 !== 0 ? num1 / num2 : 0; break;
                 case '%': resultado = num1 * (num2 / 100); break;
                 case '^': resultado = Math.pow(num1, num2); break;
                 default: resultado = num2;
